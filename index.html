@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Permainan Tebak Angka</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Permainan Tebak Angka</h1>
+    <form method="POST">
+        <label for="guess">Tebak angka antara 1 dan 100:</label>
+        <input type="number" id="guess" name="guess" required>
+        <button type="submit">Kirim Tebakan</button>
+    </form>
+    {% if message %}
+        <p class="{{ message_class }}">{{ message }}</p>
+    {% endif %}
+</body>
+</html>
